@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function convertText(){
+            const a = document.getElementById('inputText').value;
+            const b = document.getElementById('outputText');
+            let text =a;
+            text = text.replace(/\n\s*\n/g, '\n');
+
+            text = text.replace(/[\u200B-\u200D\uFEFF]/g, '');
+
+            b.value = text;
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>빈줄제거</h1>
+    <div>
+        <div><textarea name="" id="inputText" rows="10" cols="50" ></textarea></div>
+        <div><textarea name="" id="outputText" rows="10" cols="50"></textarea></div>
+        <button onclick="convertText()">변환</button>
+    </div>
+</body>
+</html>
